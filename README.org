@@ -11,7 +11,7 @@
   - ~[M-x] next-song~ : change your univers
   - ~[M-x] previous-song~ : Your best wish was yesterday
 
-* TODO :
+* Need to do :
   - Write a true documentation
   - Build a classic package
   - Ask for review
