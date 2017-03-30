@@ -1,1 +1,18 @@
-# playerctl.el
+#+TITLE: Playerctl.el
+
+* Why
+  - A ultra-simple module ton bind [[https://github.com/acrisci/playerctl][playerctl]] with emacs.
+  - I do it to learn elisp and package suff
+  - Still an alpha
+
+* Use
+  - ~[M-x] play-or-pause-music~ : Creat joy or stop noise
+  - ~[M-x] stop-music~ : Push back your brain in real world
+  - ~[M-x] next-song~ : change your univers
+  - ~[M-x] previous-song~ : Your best wish was yesterday
+
+* TODO
+  - Write a true documentation
+  - Build a classic package
+  - Ask for review
+  - push it on melpa
