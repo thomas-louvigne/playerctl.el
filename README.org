@@ -1,9 +1,12 @@
 #+TITLE: Playerctl.el
+* What
+  - Playerctl , let you control your music player (Spotify, vlc, audacious, bmp, xmms2, and others)
+  - playerctl.el is just a binding to play your music from emacs
 
 * Why
   - A ultra-simple module ton bind [[https://github.com/acrisci/playerctl][playerctl]] with emacs.
-  - I do it to learn elisp and package suff
-  - Still an alpha
+  - I want learn elisp and packaging suff
+
 
 * Use
   - ~[M-x] play-or-pause-music~ : Creat joy or stop noise
@@ -13,6 +16,9 @@
 
 * Need to do :
   - Write a true documentation
+  - build a true emacs package
+  - Implemant volum manager by playerctl
+  - Implemant status manager to display current artist and song
   - Build a classic package
   - Ask for review
   - push it on melpa
