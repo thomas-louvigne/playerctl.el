@@ -11,8 +11,8 @@
 ;;
 ;; Use:
 ;; (require 'playerctl)
-;; (define-key global-map (kbd "C-c C-SPC") 'play-pause-song)
-;; (define-key global-map (kbd "C-c C-n") 'next-song)
+;; (define-key global-map (kbd "C-c C-SPC") 'playerctl-play-pause-song)
+;; (define-key global-map (kbd "C-c C-n") 'playerctl-next-song)
 ;; More info on https://github.com/thomasluquet/playerctl.el
 ;;
 ;;; Code:

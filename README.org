@@ -9,19 +9,20 @@ In your emacs.d/init.el :
 #+begin_example
 #+begin_src el
 (require 'playerctl)
-(define-key global-map (kbd "C-c C-SPC") 'play-pause-song)
-(define-key global-map (kbd "C-c C-n") 'next-song)
+(define-key global-map (kbd "C-c C-SPC") 'playerctl-play-pause-song)
+(define-key global-map (kbd "C-c C-n") 'playerctl-next-song)
 #+end_src el
 #+end_example
 
-  - ~[M-x] play-pause-song~ : Creat joy or stop noise
-  - ~[M-x] next-song~ : change your univers
-  - ~[M-x] previous-song~ : Your best wish was yesterday
-  - ~[M-x] stop-song~ : Push back your brain in real world
+  - ~[M-x] playerctl-play-pause-song~ : Creat joy or stop noise
+  - ~[M-x] playerctl-next-song~ : change your univers
+  - ~[M-x] playerctl-previous-song~ : Your best wish was yesterday
+  - ~[M-x] playerctl-stop-song~ : Push back your brain in real world
 
 * Need to do :
   - Write a true documentation
-  - Implemant volum manager by playerctl
+  - Check if playerctl is installed
+  - Implemant volume manager by playerctl
   - Implemant status manager to display current artist and song
   - Ask for code review
   - push it on melpa
