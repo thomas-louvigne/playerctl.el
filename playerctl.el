@@ -1,9 +1,22 @@
-;;; package --- Summary
-;;; Simple package to play music from emacs with playerctl
+;;; Playerctl.el --- All your music from Emacs
+;; Simple package to play with your music from your music player (Spotify, vlc, audacious, bmp, xmms2, and others) from Emacs with playerctl
+;;
+;; Author: Thomas Luquet <thomas@luquet.net>
+;; Keywords: playerctl, music
+;; Version: 0.1
+;;
 ;;; Commentary:
-;;; You need to have playerctl installed
-;;; More info on https://github.com/thomasluquet/playerctl.el
+;; Simple package to play with your music from your music player (Spotify, vlc, audacious, bmp, xmms2, and others) from Emacs with playerctl
+;;
+;; You need to have playerctl installed
+;; More info on https://github.com/thomasluquet/playerctl.el
+;;
 ;;; Code:
+
+;; (playerctl :repo "thomasluquet/playerctl.el"
+;;             :fetcher github
+;;             :files ("playerctl.el"))
+
 (defgroup playerctl.el nil
   "Control your music from emacs with playerctl."
   :group 'multimedia)
@@ -34,4 +47,5 @@
   (start-process-shell-command "playerctl.el" "stop" "playerctl" "stop")
   (message "Stop music"))
 
+(provide 'playerctl)
 ;;; playerctl.el ends here
