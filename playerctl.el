@@ -13,10 +13,6 @@
 ;;
 ;;; Code:
 
-;; (playerctl :repo "thomasluquet/playerctl.el"
-;;             :fetcher github
-;;             :files ("playerctl.el"))
-
 (defgroup playerctl.el nil
   "Control your music from emacs with playerctl."
   :group 'multimedia)
