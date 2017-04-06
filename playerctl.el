@@ -1,10 +1,11 @@
 ;;; Playerctl.el --- Use your music player (Spotify...) with playerctl
 ;;
+;;
 ;; Author: Thomas Luquet <thomas@luquet.net>
 ;; Keywords: multimedia, playerctl, music
 ;; URL: https://github.com/thomasluquet/playerctl.el
 ;; Version: 0.0.1
-
+;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
@@ -63,6 +64,7 @@
   "Mode for playing your music with playerctl."
   :global t
   )
+
 
 (provide 'playerctl)
 ;;; playerctl.el ends here
