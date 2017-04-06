@@ -37,25 +37,25 @@
 (defun playerctl-play-pause-song()
   "Play or pause the song"
   (interactive)
-  (start-process-shell-command "playerctl.el" "playOrPause" "playerctl" "play-pause")
+  (start-process "playerctl.el" nil "playerctl" "play-pause")
   (message "Play or pause the current song"))
 
 (defun playerctl-next-song()
   "Change the song by the next one"
   (interactive)
-  (start-process-shell-command "playerctl.el" "next" "playerctl" "next")
+  (start-process "playerctl.el" nil "playerctl" "next")
   (message "Next song"))
 
 (defun playerctl-previous-song()
   "Change the song by the last one"
   (interactive)
-  (start-process-shell-command "playerctl.el" "previous" "playerctl" "previous")
+  (start-process "playerctl.el" nil "playerctl" "previous")
   (message "Previous song"))
 
 (defun playerctl-stop-song()
   "Stop song"
   (interactive)
-  (start-process-shell-command "playerctl.el" "stop" "playerctl" "stop")
+  (start-process "playerctl.el" nil "playerctl" "stop")
   (message "Stop music"))
 
 (provide 'playerctl)
