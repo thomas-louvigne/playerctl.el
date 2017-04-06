@@ -58,5 +58,11 @@
   (start-process "playerctl.el" nil "playerctl" "stop")
   (message "Stop music"))
 
+;;;###autoload
+(define-minor-mode playerctl-mode "playerctl"
+  "Mode for playing your music with playerctl."
+  :global t
+  )
+
 (provide 'playerctl)
 ;;; playerctl.el ends here
