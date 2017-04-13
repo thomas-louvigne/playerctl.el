@@ -1,4 +1,4 @@
-;;; Playerctl.el --- Use your music player (Spotify...) with playerctl
+;;; playerctl.el --- Use your music player (Spotify...) with playerctl
 ;;
 ;;
 ;; Author: Thomas Luquet <thomas@luquet.net>
@@ -60,9 +60,8 @@
   (message "Stop music"))
 
 ;;;###autoload
-(define-minor-mode playerctl-mode "playerctl"
+(defun playerctl()
   "Mode for playing your music with playerctl."
-  :global t
   )
 
 
