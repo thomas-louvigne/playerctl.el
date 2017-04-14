@@ -1,5 +1,4 @@
-;;; playerctl.el --- Use your music player (Spotify...) with playerctl
-;;
+;;; playerctl.el --- Control your music player (e.g. Spotify) with playerctl
 ;;
 ;; Author: Thomas Luquet <thomas@luquet.net>
 ;; Keywords: multimedia, playerctl, music
@@ -19,50 +18,44 @@
 
 ;;
 ;;; Commentary:
-;; Play music with Spotify, vlc, audacious, bmp, xmms2, and others music player from Emacs with playerctl
+;; Play music with Spotify, vlc, audacious, bmp, xmms2, and others
+;; music player with playerctl: <https://github.com/acrisci/playerctl>
 ;;
-;;; Dependencies:
-;; You need to have playerctl installed : <https://github.com/acrisci/playerctl>
-;;
-;;; Customization:
-;; (require 'playerctl)
+;;; Usage:
+;; (require 'playerctl) ; unless installed from a package
 ;; (define-key global-map (kbd "C-c C-SPC") 'playerctl-play-pause-song)
 ;; (define-key global-map (kbd "C-c C-n") 'playerctl-next-song)
 ;;
 ;;; Code:
 
-(defgroup playerctl.el nil
-  "Control your music from emacs with playerctl."
-  :group 'multimedia)
-
-(defun playerctl-play-pause-song()
-  "Play or pause the song"
-  (interactive)
-  (start-process "playerctl.el" nil "playerctl" "play-pause")
-  (message "Play or pause the current song"))
-
-(defun playerctl-next-song()
-  "Change the song by the next one"
-  (interactive)
-  (start-process "playerctl.el" nil "playerctl" "next")
-  (message "Next song"))
-
-(defun playerctl-previous-song()
-  "Change the song by the last one"
-  (interactive)
-  (start-process "playerctl.el" nil "playerctl" "previous")
-  (message "Previous song"))
-
-(defun playerctl-stop-song()
-  "Stop song"
-  (interactive)
-  (start-process "playerctl.el" nil "playerctl" "stop")
-  (message "Stop music"))
+(defun playerctl--command (cmd msg)
+  "Pass CMD to playerctl and display MSG."
+  (start-process "playerctl.el" nil "playerctl" cmd)
+  (message msg))
 
 ;;;###autoload
-(defun playerctl()
-  "Mode for playing your music with playerctl."
-  )
+(defun playerctl-play-pause-song()
+  "Play or pause the song."
+  (interactive)
+  (playerctl--command "play-pause" "Play or pause the current song"))
+
+;;;###autoload
+(defun playerctl-next-song()
+  "Change the song to the next one."
+  (interactive)
+  (playerctl--command "next" "Next song"))
+
+;;;###autoload
+(defun playerctl-previous-song()
+  "Change the song to the last one."
+  (interactive)
+  (playerctl--command "previous" "Previous song"))
+
+;;;###autoload
+(defun playerctl-stop-song()
+  "Stop song."
+  (interactive)
+  (playerctl--command "stop" "Stop music"))
 
 
 (provide 'playerctl)
