@@ -6,11 +6,25 @@
 * Use
 In your emacs.d/init.el :
 
+** Classic install
 #+begin_example
 #+begin_src el
 (require 'playerctl)
 (define-key global-map (kbd "C-c C-SPC") 'playerctl-play-pause-song)
 (define-key global-map (kbd "C-c C-n") 'playerctl-next-song)
+#+end_src el
+#+end_example
+
+** Use-package install
+#+begin_example
+#+begin_src el
+(use-package playerctl
+  :bind(
+        ("C-c C-SPC" . playerctl-play-pause-song)
+        ("C-c C-n" . playerctl-next-song)
+        ("C-c C-p" . playerctl-previous-song)
+        )
+)
 #+end_src el
 #+end_example
 
@@ -23,6 +37,4 @@ In your emacs.d/init.el :
   - Write a true documentation
   - Check if playerctl is installed
   - Implemant volume manager by playerctl
-  - Implemant status manager to display current artist and song
-  - Ask for code review
-  - push it on melpa
+  - Implemant status manager to display status, current artist and song
