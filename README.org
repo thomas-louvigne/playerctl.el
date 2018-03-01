@@ -28,11 +28,12 @@ In your emacs.d/init.el :
 #+end_src el
 #+end_example
 
+** Commands
   - ~[M-x] playerctl-play-pause-song~ : Creat joy or stop noise
   - ~[M-x] playerctl-next-song~ : change your univers
   - ~[M-x] playerctl-previous-song~ : Your best wish was yesterday
   - ~[M-x] playerctl-stop-song~ : Push back your brain in real world
-
+  - ~[M-x] playerctl-status~ : Give you the status of the player
 * Need to do :
   - Write a true documentation
   - Check if playerctl is installed
