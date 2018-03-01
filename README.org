@@ -38,4 +38,5 @@ In your emacs.d/init.el :
   - Write a true documentation
   - Check if playerctl is installed
   - Implemant volume manager by playerctl
-  - Implemant status manager to display status, current artist and song
+  - Implemant status manager to display current artist and song
+  - Put status / artist / song in statusbar
