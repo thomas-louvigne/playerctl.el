@@ -34,9 +34,10 @@ In your emacs.d/init.el :
   - ~[M-x] playerctl-previous-song~ : Your best wish was yesterday
   - ~[M-x] playerctl-stop-song~ : Push back your brain in real world
   - ~[M-x] playerctl-status~ : Give you the status of the player
+  - ~[M-x] playerctl-volume-up~ : Turn volume up
+  - ~[M-x] playerctl-volume-down~ : Turns volume down
 * Need to do :
   - Write a true documentation
   - Check if playerctl is installed
-  - Implemant volume manager by playerctl
   - Implemant status manager to display current artist and song
   - Put status / artist / song in statusbar
