@@ -29,15 +29,20 @@
 ;;; Code:
 
 (defun playerctl--command (cmd msg)
-  (let ((proc (start-process "playerctl.el" "foo" "playerctl" cmd)))
+  (let ((proc (start-process "playerctl.el" "*playerctl*" "playerctl" cmd)))
     (if (equal cmd "status")
         (set-process-filter proc (lambda
                                   (proc line)
                                   (message "Status : %s" line)))
-      (message msg)
-        )
-    )
-  )
+      (message msg))))
+
+(defun playerctl--command-with-arg (cmd arg msg)
+  (let ((proc (start-process "playerctl.el" "*playerctl*" "playerctl" cmd arg)))
+    (if (equal cmd "status")
+        (set-process-filter proc (lambda
+                                  (proc line)
+                                  (message "Status : %s" line)))
+      (message msg))))
 
 ;;;###autoload
 (defun playerctl-play-pause-song()
@@ -69,7 +74,17 @@
   (interactive)
   (playerctl--command "status" "status"))
 
+;;;###autoload
+(defun playerctl-volume-up()
+  "Turn the volume by 0.1 up."
+  (interactive)
+  (playerctl--command-with-arg "volume" "0.1+" "Volume up!"))
 
+;;;###autoload
+(defun playerctl-volume-down()
+  "Turn the volume by 0.1 down."
+  (interactive)
+  (playerctl--command-with-arg "volume" "0.1-" "Volume down!"))
 
 (provide 'playerctl)
 ;;; playerctl.el ends here
