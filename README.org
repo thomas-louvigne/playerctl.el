@@ -23,6 +23,8 @@ In your emacs.d/init.el :
         ("C-c C-SPC" . playerctl-play-pause-song)
         ("C-c C-n" . playerctl-next-song)
         ("C-c C-p" . playerctl-previous-song)
+        ("C-c C-f" . playerctl-seek-foward)
+        ("C-c C-b" . playerctl-seek-backward)
         )
 )
 #+end_src el
@@ -36,6 +38,8 @@ In your emacs.d/init.el :
   - ~[M-x] playerctl-status~ : Give you the status of the player
   - ~[M-x] playerctl-volume-up~ : Turn volume up
   - ~[M-x] playerctl-volume-down~ : Turns volume down
+  - ~[M-x] playerctl-seek-forward~ : Seeks forward
+  - ~[M-x] playerctl-seek-backward~ : Seeks backward
 * Need to do :
   - Write a true documentation
   - Check if playerctl is installed
