@@ -28,6 +28,11 @@
 ;;
 ;;; Code:
 
+(defcustom playerctl-seek-seconds 10
+  "Number of seconds to seek forward/backward."
+  :type 'integer
+  :group 'multimedia)
+
 (defun playerctl--command (cmd msg)
   (let ((proc (start-process "playerctl.el" "*playerctl*" "playerctl" cmd)))
     (if (equal cmd "status")
@@ -85,6 +90,20 @@
   "Turn the volume by 0.1 down."
   (interactive)
   (playerctl--command-with-arg "volume" "0.1-" "Volume down!"))
+
+;;;###autoload
+(defun playerctl-seek-forward()
+  "Seek forward 'playerctl-seek-seconds' seconds."
+  (interactive)
+  (playerctl--command-with-arg
+   "position" (format "%d+" playerctl-seek-seconds) "Seek forward"))
+
+;;;###autoload
+(defun playerctl-seek-backward()
+  "Seek backward 'playerctl-seek-seconds' seconds."
+  (interactive)
+  (playerctl--command-with-arg
+   "position" (format "%d-" playerctl-seek-seconds) "Seek backward"))
 
 (provide 'playerctl)
 ;;; playerctl.el ends here
