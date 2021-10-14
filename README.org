@@ -40,8 +40,8 @@ In your emacs.d/init.el :
   - ~[M-x] playerctl-volume-down~ : Turns volume down
   - ~[M-x] playerctl-seek-forward~ : Seeks forward
   - ~[M-x] playerctl-seek-backward~ : Seeks backward
+  - ~[M-x] playerctl-metadata~ : Show metadata (player name, status, artist, album, and title)
 * Need to do :
   - Write a true documentation
   - Check if playerctl is installed
-  - Implemant status manager to display current artist and song
   - Put status / artist / song in statusbar
