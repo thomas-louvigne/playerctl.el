@@ -105,5 +105,12 @@
   (playerctl--command-with-arg
    "position" (format "%d-" playerctl-seek-seconds) "Seek backward"))
 
+;;;###autoload
+(defun playerctl-metadata ()
+  "Get metadata from playerctl player."
+  (interactive)
+  (playerctl--command-with-arg
+   "metadata" "--format" "{{ playerName }} {{ lc(status) }}: {{ artist }} - {{ album }} - {{ title }}" ""))
+
 (provide 'playerctl)
 ;;; playerctl.el ends here
