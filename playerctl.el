@@ -110,7 +110,7 @@
   "Get metadata from playerctl player."
   (interactive)
   (playerctl--command-with-arg
-   "metadata" "--format" "{{ playerName }} {{ lc(status) }}: {{ artist }} - {{ album }} - {{ title }}" ""))
+   "metadata" "--format={{ playerName }} {{ lc(status) }}: {{ artist }} - {{ album }} - {{ title }}" ""))
 
 (provide 'playerctl)
 ;;; playerctl.el ends here
